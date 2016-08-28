@@ -1,0 +1,294 @@
+@font-face {
+	font-family: 'Coves';
+	src: url("../fonts/Coves Light.otf");
+}
+
+html, body, div, section, article, aside, header, hgroup, footer, nav, h1, h2, h3, h4, h5, h6, p,a, blockquote, address, time, span, em, strong, img, ol, ul, li, figure, canvas, video, th, td, tr,iframe {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align:baseline;
+	font: inherit;
+	text-decoration:none;
+	list-style:none;
+	font-family: Coves, Arial;
+}
+
+.ico .fa {
+	margin-top: 7px;
+}
+
+#contacts  {
+	width: 100%;
+	text-align: center;
+	color:#3a7aa6;
+}
+
+#contacts img {
+	vertical-align: middle;
+	margin-right: 8px;
+	margin-bottom: 4px;
+}
+
+.contact {
+	background-repeat:no-repeat;
+	height:30px;
+	font-size:13px;
+	background-position:left center;
+	padding-top:15px;
+	padding-left:35px;
+}
+
+.contact a {
+    color:#3a7aa6;
+    font-size: 14px;
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.contact a:hover {
+	background-color: #3a7aa6;
+	color: #ffffff;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+#email {
+	background-image: url("../img/email.png");
+}
+
+#phone {
+	background-image: url("../img/phone.png");
+}
+
+#location {
+	background-image: url("../img/location.png");
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	padding:0;
+	margin:0;
+	color:#999999;
+	overflow-x:hidden;
+	font-size:13px;
+	display: block;
+}
+
+#container {
+	width: 900px;
+	position: absolute;
+	top:40%;
+	left:50%;
+	-ms-transform: translateX(-50%) translateY(-40%);
+	-webkit-transform: translate(-50%,-40%);
+	transform: translate(-50%,-40%);
+}
+
+.section{
+	padding-bottom:40px;
+}
+
+
+.secTitle {
+    text-align: center;
+	padding-top:40px;
+	padding-bottom:40px;
+	box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.22) inset;
+	-webkit-box-shadow:0 -1px 3px rgba(0, 0, 0, 0.22) inset;
+	-moz-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.22) inset;
+	-ms-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.22) inset;
+	-o-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.22) inset;
+}
+
+.secInner{
+	text-align: center;
+	padding-top:33px;
+	padding-bottom:40px;
+	width:100%;
+}
+
+.innerTitle{
+	text-align: center;
+	margin-top:50px;
+}
+
+.innerTitle h1{
+    font-size: 30px;
+	text-transform: uppercase;
+	color:#2d2d2d;
+}
+
+.innerTitle p{
+    font-size: 16px;
+}
+
+
+.column{
+	float:left;	
+}
+
+.top{
+	margin-top:70px;
+	margin-bottom:70px;
+}
+
+
+.nBottom{
+	margin-bottom:0px;
+}
+
+.nTop{
+	margin-top:0px;
+}
+
+
+.subTitle h1{
+	font-size:20px;
+	margin-bottom:50px;
+	color:#2d2d2d;
+	text-transform:uppercase;
+	border-top:1px dashed #d7d7d7;
+	border-bottom:1px dashed #d7d7d7;
+	display:inline-block;
+	padding:10px 10px;
+
+}
+
+#about{
+	position:relative;
+}
+
+#about .secTitle{
+	background:#6ac8c8;
+}
+
+.userProfile{
+	position:relative;
+}
+
+.imgProfile {
+    border: 1px solid #efefef;
+    border-radius: 100%;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-ms-border-radius: 100%;
+	-o-border-radius: 100%;
+    height: 200px;
+    margin-right: 50px;
+    margin-top: 20px;
+    padding: 5px;
+    width: 200px;
+	margin:0 auto;
+	
+}
+
+.imgProfile:before {
+    border-top: 1px solid #EFEFEF;
+    content: "";
+    display: block;
+    left: 50%;
+    margin-left: 130px;
+    position: absolute;
+    top: 100px;
+    width: 250px;
+    z-index: 0;
+}
+
+.imgProfile:after {
+    border-top: 1px solid #EFEFEF;
+    content: "";
+    display: block;
+    margin-right: 130px;
+    position: absolute;
+    right: 50%;
+    top: 100px;
+    width: 250px;
+    z-index: 0;
+}
+
+.imgProfile img {
+    border: medium none;
+    border-radius: 100%;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-ms-border-radius: 100%;
+	-o-border-radius: 100%;
+    display: inline-block;
+}
+
+.getBtn {
+    left: 17.2%;
+    position: absolute;
+    top: 32.5%;
+}
+
+.followBtn {
+    position: absolute;
+    right: 17.2%;
+    top: 32.5%;
+}
+
+.followBtn .ico, .getBtn .ico{
+	display:inline-block;
+}
+
+.followBtn h3, .getBtn h3{
+	color:#666666;
+	text-align:center;
+	display:block;
+	font-size:14px;
+	margin:0 -13px;
+}
+
+.ico a {
+    background:#2D2D2D;
+    border: 10px solid #FFFFFF;
+    border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-ms-border-radius: 100px;
+	-o-border-radius: 100px;
+	/* Prevent background color leak outs */
+	 -webkit-background-clip: padding-box; 
+	 -moz-background-clip:padding; 
+	 background-clip:padding-box;
+    color: #FFFFFF;
+    display:block;
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+	margin: 0 auto;
+    width: 40px;
+	text-align:center;
+}
+
+.ico a {
+    /*color:#3a7aa6;*/
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.ico a:hover{
+	background:#3a7aa6;
+}
+
+.ico a.github {
+	font-size: 28px;
+}
+
+.ico a.linkedin {
+	font-size: 20px;
+}
