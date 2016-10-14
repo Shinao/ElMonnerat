@@ -1,0 +1,19 @@
+{
+  "name": "ElMonnerat",
+  "version": "1.0.0",
+  "description": "ElMonnerat website",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "morgan": "^1.7.0",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "postinstall": "",
+  "author": "",
+  "license": "ISC"
+}
