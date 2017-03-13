@@ -35,6 +35,7 @@
 - `pm2 set pm2-logrotate:retain 10`
 - Copy dump.pm2 into ~/.pm2/ for loading the previous configuration
 - `pm2 resurrect`
+- `pm2 startup`
 
 #### TeamSpeak Server
 - `adduser tsserver`
