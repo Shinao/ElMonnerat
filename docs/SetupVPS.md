@@ -27,7 +27,6 @@ OR<br>
 `apt-get install certbot -t jessie-backports`
 - `./certbot-auto renew`<br>
 OR<br>
-
 `certbot renew`
 - `curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh`
 - `bash nodesource_setup.sh`
@@ -60,4 +59,5 @@ OR<br>
 - PM2 # Start app without autorestart with name test and pass option "-a 34" as argument<br>
 `pm2 start app.js --no-autorestart --name="test" -- -a 34`
 - Certbot create certificate<br>
-`./certbot-auto certonly -w PathToWebsite -d www.subdomain.domain.com`
+Possiblity delete everything in folder live/archives/keys in /etc/letsencrypt then register for new certificates
+`./certbot-auto --standalone certonly -w PathToWebsite -d www.subdomain.domain.com`
