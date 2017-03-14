@@ -21,8 +21,9 @@
 - Copy previous configuration files into /etc/nginx and /etc/letsencrypt
 - Append to /etc/apt/sources.list<br>
 `deb http://ftp.debian.org/debian jessie-backports main`
-- `apt-get install certbot -t jessie-backports`
-- `certbot renew`
+- Install certbot the following way<br>
+`mkdir ~/certbot && cd ~/certbot && wget https://raw.githubusercontent.com/certbot/certbot/master/certbot-auto` OR `apt-get install certbot -t jessie-backports`
+- `./certbot-auto renew` OR `certbot renew`
 - `curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh`
 - `bash nodesource_setup.sh`
 - `apt-get install nodejs`
@@ -53,3 +54,5 @@
 #### Help commands
 - PM2 # Start app without autorestart with name test and pass option "-a 34" as argument<br>
 `pm2 start app.js --no-autorestart --name="test" -- -a 34`
+- Certbot create certificate<br>
+`./certbot-auto certonly -w PathToWebsite -d www.subdomain.domain.com`
