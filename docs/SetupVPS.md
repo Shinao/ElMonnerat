@@ -14,7 +14,7 @@
 `scp -r * your_username@remotehost.edu:~/`
 
 #### Utilies
-- `apt-get install curl htop git`
+- `apt-get install curl htop git vim`
 
 #### Web
 - `apt-get install nginx`
