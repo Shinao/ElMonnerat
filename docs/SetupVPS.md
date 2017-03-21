@@ -14,7 +14,7 @@
 `scp -r * your_username@remotehost.edu:~/`
 
 #### Utilies
-- `apt-get install curl htop`
+- `apt-get install curl htop git`
 
 #### Web
 - `apt-get install nginx`
@@ -61,3 +61,4 @@ OR<br>
 - Certbot create certificate<br>
 Possiblity delete everything in folder live/archives/keys in /etc/letsencrypt then register for new certificates
 `./certbot-auto --standalone certonly -w PathToWebsite -d www.subdomain.domain.com`
+- `ssh-keygen -t rsa && ~/.ssh/id_rsa.pub`
