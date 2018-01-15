@@ -25,9 +25,11 @@
 `mkdir ~/certbot && cd ~/certbot && wget https://raw.githubusercontent.com/certbot/certbot/master/certbot-auto`<br>
 OR<br>
 `apt-get install certbot -t jessie-backports`
-- `./certbot-auto renew`<br>
-OR<br>
-`certbot renew`
+- `./certbot-auto renew` OR `certbot renew`
+- Install new nginx rule in `/etc/nginx/sites-enabled/default`
+- Add a new sub domain : `certbot certonly --standalone -d subdomain.elmonnerat.com`
+
+#### Nodejs
 - `curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh`
 - `bash nodesource_setup.sh`
 - `apt-get install nodejs`
