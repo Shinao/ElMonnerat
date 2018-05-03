@@ -38,8 +38,17 @@ OR<br>
 #### PM2
 - `npm install pm2 -g`
 - `pm2 install pm2-logrotate`
-- `pm2 set pm2-logrotate:max_size 5M`
-- `pm2 set pm2-logrotate:retain 10`
+- Set PM2 default settings
+```linux
+pm2 set pm2-logrotate:retain 7
+pm2 set pm2-logrotate:compress false 
+pm2 set pm2-logrotate:dateFormat YYYY-MM-DD_HH-mm-ss 
+pm2 set pm2-logrotate:max_size 10M 
+pm2 set pm2-logrotate:retain 7 
+pm2 set pm2-logrotate:rotateInterval '0 0 * * * '
+pm2 set pm2-logrotate:rotateModule true 
+pm2 set pm2-logrotate:workerInterval 30
+```
 - Copy dump.pm2 into ~/.pm2/ for loading the previous configuration
 - `pm2 resurrect`
 - `pm2 startup`
