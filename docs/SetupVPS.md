@@ -30,9 +30,8 @@ OR<br>
 - Add a new sub domain : `certbot certonly --standalone -d subdomain.elmonnerat.com`
 
 #### Nodejs
-- `curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh`
-- `bash nodesource_setup.sh`
-- `apt-get install nodejs`
+- `curl -sL https://deb.nodesource.com/setup_8.x | bash -`
+- `apt-get install -y nodejs`
 - `apt-get install -y build-essential`
 
 #### PM2
@@ -73,9 +72,10 @@ pm2 set pm2-logrotate:workerInterval 30
 Possiblity delete everything in folder live/archives/keys in /etc/letsencrypt then register for new certificates
 `./certbot-auto --standalone certonly -w PathToWebsite -d www.subdomain.domain.com`
 - `ssh-keygen -t rsa && ~/.ssh/id_rsa.pub`
-
-#### Diagnostics
 - Check top max size inodes<br>
 `sudo du / --inodes -xS | sort -rh | head -n 50`
 - Check disk space<br>
 `df -h`
+- Unzip folder into new directory and update files to this archive<br>
+`unzip myupdate.zip -d destfolder`<br>
+`cp -r destfolder/* somefoldertoupdate/`
