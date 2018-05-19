@@ -73,3 +73,9 @@ pm2 set pm2-logrotate:workerInterval 30
 Possiblity delete everything in folder live/archives/keys in /etc/letsencrypt then register for new certificates
 `./certbot-auto --standalone certonly -w PathToWebsite -d www.subdomain.domain.com`
 - `ssh-keygen -t rsa && ~/.ssh/id_rsa.pub`
+
+#### Diagnostics
+- Check top max size inodes<br>
+`sudo du / --inodes -xS | sort -rh | head -n 50`
+- Check disk space<br>
+`df -h`
