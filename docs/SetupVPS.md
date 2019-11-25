@@ -4,8 +4,8 @@
 - Backup all your important files<br>
 `scp -r your_username@remotehost.edu:~/* .`
 - Set SSH Key to your account settings
-- Install Debian 8 : Jessie
-- Remove old entries from your hosts<br>
+- Install Debian 10
+- Remove old password entries from your hosts<br>
 `ssh-keygen -R ip|hostname`
 - `ssh root@ip|hostname`
 - Change password<br>
@@ -19,20 +19,16 @@
 #### Web
 - `apt-get install nginx`
 - Copy previous configuration files into /etc/nginx and /etc/letsencrypt
-- Append to /etc/apt/sources.list<br>
-`deb http://ftp.debian.org/debian jessie-backports main`
 - Install certbot the following way<br>
-`mkdir ~/certbot && cd ~/certbot && wget https://raw.githubusercontent.com/certbot/certbot/master/certbot-auto`<br>
-OR<br>
-`apt-get install certbot -t jessie-backports`
+`mkdir ~/certbot && cd ~/certbot && wget https://raw.githubusercontent.com/certbot/certbot/master/certbot-auto`
 - `./certbot-auto renew` OR `certbot renew`
 - Install new nginx rule in `/etc/nginx/sites-enabled/default`
-- Add a new sub domain : `certbot certonly --standalone -d subdomain.elmonnerat.com`
+- Certbot register (sub)domain
+`./certbot-auto --standalone certonly -w ~/PathToWebsite -d (subdomain.)domain.com`
 
 #### Nodejs
-- `curl -sL https://deb.nodesource.com/setup_8.x | bash -`
+- `curl -sL https://deb.nodesource.com/setup_13.x | bash -`
 - `apt-get install -y nodejs`
-- `apt-get install -y build-essential`
 
 #### PM2
 - `npm install pm2 -g`
@@ -52,25 +48,9 @@ pm2 set pm2-logrotate:workerInterval 30
 - `pm2 resurrect`
 - `pm2 startup`
 
-#### TeamSpeak Server
-- `adduser tsserver`
-- `su tsserver && cd /home/tsserver`
-- `wget http://dl.4players.de/ts/releases/3.0.11.2/teamspeak3-server_linux-amd64-3.0.11.2.tar.gz`
-- `tar -xvzf teamspeak3-server_linux-amd64-3.0.11.2.tar.gz`
-- `mv teamspeak3-server_linux-amd64 teamspeak3 && cd teamspeak3`
-- `./ts3server_startscript.sh start`
-- Save token and Id ServerAdmin
-- Switch back to root<br>
-`su`
-- `crontab -e`
-- Add at the end `@reboot cd /home/tsserver/teamspeak3 && ./ts3server_startscript.sh start`
-
 #### Help commands
 - PM2 # Start app without autorestart with name test and pass option "-a 34" as argument<br>
 `pm2 start app.js --no-autorestart --name="test" -- -a 34`
-- Certbot create certificate<br>
-Possiblity delete everything in folder live/archives/keys in /etc/letsencrypt then register for new certificates
-`./certbot-auto --standalone certonly -w PathToWebsite -d www.subdomain.domain.com`
 - `ssh-keygen -t rsa && ~/.ssh/id_rsa.pub`
 - Check top max size inodes<br>
 `sudo du / --inodes -xS | sort -rh | head -n 50`
