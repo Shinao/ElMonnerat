@@ -15,6 +15,8 @@
 
 #### Utilies
 - `apt-get install curl htop git vim`
+- `sudo apt-get update`
+- `sudo apt-get install build-essential`
 
 #### Web
 - `apt-get install nginx`
