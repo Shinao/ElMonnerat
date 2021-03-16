@@ -16,12 +16,12 @@
 `scp -r * your_username@remotehost.edu:~/`
 
 #### Utilies
-- `apt-get install curl htop git vim`
+- `sudo apt-get install curl htop git vim`
 - `sudo apt-get update`
 - `sudo apt-get install build-essential`
 
 #### Web
-- `apt-get install nginx`
+- `sudo apt-get install nginx`
 - Copy previous configuration files into /etc/nginx and /etc/letsencrypt
 - Install certbot the following way<br>
 `mkdir ~/certbot && cd ~/certbot && wget https://raw.githubusercontent.com/certbot/certbot/master/certbot-auto`
@@ -32,10 +32,10 @@
 
 #### Nodejs
 - `curl -sL https://deb.nodesource.com/setup_13.x | bash -`
-- `apt-get install -y nodejs`
+- `sudo apt-get install -y nodejs`
 
 #### PM2
-- `npm install pm2 -g`
+- `sudo npm install pm2 -g`
 - `pm2 install pm2-logrotate`
 - Set PM2 default settings
 ```linux
@@ -51,6 +51,7 @@ pm2 set pm2-logrotate:workerInterval 30
 - Copy dump.pm2 into ~/.pm2/ for loading the previous configuration
 - `pm2 resurrect`
 - `pm2 startup`
+- `pm2 save`
 
 #### Help commands
 - PM2 # Start app without autorestart with name test and pass option "-a 34" as argument<br>
