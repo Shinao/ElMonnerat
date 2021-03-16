@@ -10,6 +10,8 @@
 - `ssh root@ip|hostname`
 - Change password<br>
 `passwd`
+- Set your ssh key to your new VPS
+`cat ~/.ssh/id_rsa.pub | ssh username@remote_host "mkdir -p ~/.ssh && touch ~/.ssh/authorized_keys && chmod -R go= ~/.ssh && cat >> ~/.ssh/authorized_keys"`
 - Restore all your important files<br>
 `scp -r * your_username@remotehost.edu:~/`
 
