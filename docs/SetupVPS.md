@@ -25,10 +25,11 @@
 - Copy previous configuration files into /etc/nginx and /etc/letsencrypt
 - Install certbot the following way<br>
 `mkdir ~/certbot && cd ~/certbot && wget https://raw.githubusercontent.com/certbot/certbot/master/certbot-auto`
+`sudo apt-get install certbot`
 - `./certbot-auto renew` OR `certbot renew`
 - Install new nginx rule in `/etc/nginx/sites-enabled/default`
 - Certbot register (sub)domain
-`./certbot-auto --standalone certonly -w ~/PathToWebsite -d (subdomain.)domain.com`
+`sudo ./certbot-auto --standalone certonly -w ~/PathToWebsite -d (subdomain.)domain.com`
 
 #### Nodejs
 - `curl -sL https://deb.nodesource.com/setup_13.x | bash -`
